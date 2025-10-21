@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
     <title>Website project template</title>
-</head>
-<script>
-    const loadComponents = (id, url) =>  {
-        fetch(url)
+  </head>
+  <script>
+    const loadComponents = (id, url) => {
+      fetch(url)
         .then((response) => response.text())
         .then((html) => {
-            document.getElementById(id).innerHTML = html;
+          document.getElementById(id).innerHTML = html;
         });
-    }
+    };
 
     window.onload = () => {
         loadComponents('header', '/sections/header.html');
@@ -24,10 +24,11 @@
     }
 </script>
 <body class="box-border">
-    <!-- <div id="header"></div>
+    <div id="header"></div>
     <div id="hero"></div>
     <div id="about"></div>
-    <div id="contact"></div> -->
+    <div id="contact"></div>
     <div id="footer"></div>
-</body>
+    <script src="src/main.js"></script>
+  </body>
 </html>
