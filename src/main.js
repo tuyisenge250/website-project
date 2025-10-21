@@ -7,11 +7,38 @@ function header() {
 
 setTimeout(() => {
   header().hamburgerMenu.addEventListener("click", function (event) {
-    [...this.children].forEach(element => {
-      element.classList.toggle("hidden")
+    [...this.children].forEach((element) => {
+      element.classList.toggle("hidden");
     });
     this.nextElementSibling.classList.toggle("hidden");
     this.nextElementSibling.classList.toggle("flex");
   });
-  console.log(header());
+}, 1000);
+
+function createNavList(array) {
+  return array.map((navItem) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    link.textContent = navItem;
+    listItem.append(link);
+    console.log(listItem);
+    return listItem;
+  });
+}
+
+function createLanguageList(array) {
+  return array.map((language) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = language;
+    return listItem;
+  });
+}
+
+setTimeout(() => {
+  const languagesList = document.getElementById("languages");
+  const listItems = document.getElementById("nav-items");
+  languagesList.append(...createLanguageList(["DE", "EN"]));
+  listItems.append(
+    ...createNavList(["About", "Services", "References", "Contacts"])
+  );
 }, 1000);
