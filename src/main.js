@@ -10,7 +10,8 @@ setTimeout(() => {
     [...this.children].forEach(element => {
       element.classList.toggle("hidden")
     });
-    this.nextElementSibling.classList.toggle("scale-y-100");
+    this.nextElementSibling.classList.toggle("hidden");
+    this.nextElementSibling.classList.toggle("flex");
   });
   console.log(header());
 }, 1000);
