@@ -21,8 +21,6 @@ function createNavList(array) {
     const link = document.createElement("a");
     link.setAttribute("href", `#${navItem.toLowerCase()}`)
     link.textContent = navItem;
-    
-    console.log(link)
     listItem.append(link);
     return listItem;
   });
