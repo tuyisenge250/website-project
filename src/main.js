@@ -19,9 +19,11 @@ function createNavList(array) {
   return array.map((navItem) => {
     const listItem = document.createElement("li");
     const link = document.createElement("a");
+    link.setAttribute("href", `#${navItem.toLowerCase()}`)
     link.textContent = navItem;
+    
+    console.log(link)
     listItem.append(link);
-    console.log(listItem);
     return listItem;
   });
 }
@@ -39,6 +41,6 @@ setTimeout(() => {
   const listItems = document.getElementById("nav-items");
   languagesList.append(...createLanguageList(["DE", "EN"]));
   listItems.append(
-    ...createNavList(["About", "Services", "References", "Contacts"])
+    ...createNavList(["About", "Services", "References", "Contact"])
   );
 }, 1000);
