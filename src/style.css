@@ -1,1 +1,4 @@
 @import "tailwindcss";
+@utility grid-cols-3-max {
+  grid-template-columns: repeat(3, max-content);
+}

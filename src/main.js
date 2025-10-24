@@ -7,9 +7,11 @@ function header() {
 
 setTimeout(() => {
   header().hamburgerMenu.addEventListener("click", function (event) {
-    [...this.children].forEach((element) => {
+    [...this.children].filter((_, index) => index !== 0).forEach((element) => {
       element.classList.toggle("hidden");
     });
+
+
     this.nextElementSibling.classList.toggle("hidden");
     this.nextElementSibling.classList.toggle("flex");
   });
