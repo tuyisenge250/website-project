@@ -9,17 +9,19 @@
 <link rel="stylesheet" href="/src/style.css">
 <script>
     const loadComponents = (id, url) => {
-        fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                document.getElementById(id).innerHTML = html;
-            });
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
     };
-
     window.onload = () => {
-        loadComponents('header', '/sections/header.html');
-        loadComponents('footer', '/sections/footer.html');
-        loadComponents('data-privacy', '/sections/data-privacy-middle-section.html');
+        Promise.all([
+            loadComponents('header', 'src/sections/header.html'),
+            loadComponents('data-privacy', 'src/sections/data-privacy-middle-section.html'),
+            loadComponents('footer', 'src/sections/footer.html')]).then(() => {
+                footerLocation()
+            });
     }
 </script>
 
