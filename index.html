@@ -6,6 +6,7 @@
     <link href="/src/style.css" rel="stylesheet" />
     <title>Website project template</title>
     <script src="./src/footer.js"></script>
+     <script src="src/service.js"></script>
   </head>
   <script>
     const loadComponents = (id, url) => {
@@ -21,12 +22,11 @@
             loadComponents('hero', 'src/sections/hero.html'),
             loadComponents('contact', 'src/sections/contact.html'),
             loadComponents('about', 'src/sections/about.html'),
-            loadComponents('service', 'src/sections/service.html', () => {
-  serviceInit(); 
-}),
+            loadComponents('service', 'src/sections/service.html'),
             loadComponents('reference', 'src/sections/reference.html'),
             loadComponents('footer', 'src/sections/footer.html')]).then(() => {
-                footerLocation()
+                footerLocation();
+                serviceInit(); 
             });
     }
 </script>
@@ -39,7 +39,7 @@
     <div id="reference"></div>
     <div id="footer"></div>
       <script src="src/main.js"></script>
-    <script src="src/service.js"></script>
+   
 </body>
 
 </html>

@@ -4,7 +4,6 @@ function header() {
     hamburgerMenu: document.getElementById("hamburger-menu"),
   };
 }
-
 setTimeout(() => {
   header().hamburgerMenu.addEventListener("click", function (event) {
     [...this.children].forEach(element => {
