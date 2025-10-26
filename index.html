@@ -21,7 +21,9 @@
             loadComponents('hero', 'src/sections/hero.html'),
             loadComponents('contact', 'src/sections/contact.html'),
             loadComponents('about', 'src/sections/about.html'),
-            loadComponents('service', 'src/sections/service.html'),
+            loadComponents('service', 'src/sections/service.html', () => {
+  serviceInit(); 
+}),
             loadComponents('reference', 'src/sections/reference.html'),
             loadComponents('footer', 'src/sections/footer.html')]).then(() => {
                 footerLocation()
@@ -36,6 +38,8 @@
     <div id="contact"></div>
     <div id="reference"></div>
     <div id="footer"></div>
+      <script src="src/main.js"></script>
+    <script src="src/service.js"></script>
 </body>
 
 </html>
