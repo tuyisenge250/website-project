@@ -16,7 +16,7 @@ function footerLocation(){
     }
     const textLegal = ["Datenschutz", "Impressum"]
  
-    footerSocialElement.innerHTML += `<div class="flex justify-between w-[50%] md:w-[40%] lg:flex-col gap-0 lg:w-[15%] lg:justify-start" id="footer-legal">${textLegal.map(line => `<p>${line}</p>`).join('')}</div>`
+    footerSocialElement.innerHTML += `<div class="flex flex-wrap justify-between w-[50%] md:w-[40%] lg:flex-col gap-0 lg:w-[15%] lg:justify-start" id="footer-legal">${textLegal.map(line => `<p>${line}</p>`).join('')}</div>`
 
 
 }
