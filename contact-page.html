@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link href="/src/style.css" rel="stylesheet">
+    <script src="/src/contact-page.js"></script>
 </head>
 <script>
     const loadComponents = (id, url) => {
@@ -15,11 +16,13 @@
           document.getElementById(id).innerHTML = html;
         });
     };
-
     window.onload = () => {
-        loadComponents('header', '/sections/header.html');
-        loadComponents('footer', '/sections/footer.html');
-        loadComponents('contact-middle', '/sections/contact-middle-section.html');
+        Promise.all([
+            loadComponents('header', 'src/sections/header.html'),
+            loadComponents('contact-middle', 'src/sections/contact-middle-section.html'),
+            loadComponents('footer', 'src/sections/footer.html')]).then(() => {
+                Contactpage()
+            });
     }
 </script>
 
