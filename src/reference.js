@@ -9,7 +9,7 @@ function referenceInit() {
     { name: "ChungKing Noodles", url: "https://www.armedangels.com/de-de" },
     { name: "Designpreis Brandenburg", url: "https://www.armedangels.com/de-de" },
     { name: "Die techniker", url: "https://www.armedangels.com/de-de" },
-    { name: "European Street Food Awards", url: "https://www.armedangels.com/de-de" },
+    { name: "European Street Awards", url: "https://www.armedangels.com/de-de" },
     { name: "Grundman dentistry", url: "https://www.armedangels.com/de-de" },
     { name: "HORNBACH Werstuck", url: "https://www.armedangels.com/de-de" },
     { name: "HORNABACH macht Schule", url: "https://www.armedangels.com/de-de" },
