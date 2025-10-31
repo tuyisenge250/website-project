@@ -7,34 +7,21 @@
     <title>Website project template</title>
   </head>
   <script>
-    const loadComponents = (id, url) => {
-      fetch(url)
+    const loadComponents = (id, url) =>  {
+        fetch(url)
         .then((response) => response.text())
         .then((html) => {
-          document.getElementById(id).innerHTML = html;
+            document.getElementById(id).innerHTML = html;
         });
-    };
+    }
+
     window.onload = () => {
-        Promise.all([
-            loadComponents('header', 'src/sections/header.html'),
-            loadComponents('hero', 'src/sections/hero.html'),
-            loadComponents('contact', 'src/sections/contact.html'),
-            loadComponents('about', 'src/sections/about.html'),
-            loadComponents('service', 'src/sections/service.html'),
-            loadComponents('reference', 'src/sections/reference.html'),
-            loadComponents('footer', 'src/sections/footer.html')]).then(() => {
-                footerLocation()
-            });
+        loadComponents('hero', '/sections/hero.html');
     }
 </script>
 <body class="box-border font-outfit">
-    <div id="header"></div>
     <div id="hero"></div>
-    <div id="about"></div>
-    <div id="service"></div>
-    <div id="contact"></div>
-    <div id="reference"></div>
-    <div id="footer"></div>
 </body>
-<script src="./src/footer.js"></script>
+<script src="footer.js"></script>
+<script src="/src/main.js"></script>
 </html>
