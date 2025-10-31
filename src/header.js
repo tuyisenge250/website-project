@@ -5,6 +5,20 @@ function header() {
   };
 }
 
+function fun() {
+  for (const element of [...header()["navItems"].children].map(
+    (el) => el.firstElementChild
+  )) {
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (element.href.includes("#") && location.href.includes(".html"))
+        location.href = `/${element.getAttribute("href")}`;
+      location.href = element.href;
+    });
+  }
+}
+
 function createNavList(array) {
   return array.map((navItem) => {
     const listItem = document.createElement("li");
@@ -49,8 +63,9 @@ function navList() {
 }
 
 function checkPage() {
-  if (location.href !== "http://localhost:5173/") {
+  if (location.pathname.includes(".html")) {
     document.getElementById("header").classList.add("text-green");
+    header()["navItems"].classList.add("lg:text-green");
     header()["hamburgerMenu"].firstElementChild.firstElementChild.setAttribute(
       "class",
       "fill-green"
@@ -59,5 +74,5 @@ function checkPage() {
 }
 
 setTimeout(() => {
-  menu(), navList(), checkPage();
+  menu(), navList(), checkPage(), fun();
 }, 1000);
