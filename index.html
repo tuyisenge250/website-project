@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet" />
     <title>Website project template</title>
+
     <script src="./src/footer.js"></script>
      <script src="src/service.js"></script>
+
   </head>
   <script>
-    const loadComponents = (id, url) => {
-      fetch(url)
+    const loadComponents = (id, url) =>  {
+        fetch(url)
         .then((response) => response.text())
         .then((html) => {
-          document.getElementById(id).innerHTML = html;
+            document.getElementById(id).innerHTML = html;
         });
-    };
+    }
+
     window.onload = () => {
+
         Promise.all([
             loadComponents('header', 'src/sections/header.html'),
             loadComponents('hero', 'src/sections/hero.html'),
@@ -30,8 +34,7 @@
             });
     }
 </script>
-<body class="box-border">
-    <div id="header"></div>
+<body class="box-border font-outfit">
     <div id="hero"></div>
     <div id="about"></div>
     <div id="service"></div>
@@ -40,6 +43,7 @@
     <div id="footer"></div>
       <script src="src/main.js"></script>
    
+
 </body>
 
 </html>
