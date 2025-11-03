@@ -9,13 +9,14 @@
     <script src="./src/about.js"></script>
   </head>
   <script>
-    const loadComponents = (id, url) => {
-      fetch(url)
+    const loadComponents = (id, url) =>  {
+        fetch(url)
         .then((response) => response.text())
         .then((html) => {
-          document.getElementById(id).innerHTML = html;
+            document.getElementById(id).innerHTML = html;
         });
-    };
+    }
+
     window.onload = () => {
         Promise.all([
             loadComponents('header', 'src/sections/header.html'),
@@ -30,14 +31,8 @@
             });
     }
 </script>
-<body class="box-border">
-    <div id="header"></div>
+<body class="box-border font-outfit">
     <div id="hero"></div>
-    <div id="about"></div>
-    <div id="service"></div>
-    <div id="contact"></div>
-    <div id="reference"></div>
-    <div id="footer"></div>
 </body>
 
 </html>
