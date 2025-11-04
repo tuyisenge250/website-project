@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet" />
-    <title>Website project template</title>
+    <title>Website project template</title>  
   </head>
   <script>
     const loadComponents = (id, url) =>  {
@@ -16,11 +16,18 @@
     }
 
     window.onload = () => {
-        loadComponents('hero', '/sections/hero.html');
+        Promise.all([
+            loadComponents('hero', '/sections/hero.html'),
+            loadComponents('reference', './public/sections/reference.html'),
+        ]).then(() => {
+            footerLocation();
+            referenceInit();
+        });
     }
 </script>
 <body class="box-border font-outfit">
     <div id="hero"></div>
+    <div id="reference"></div>
+    <script src="./public/reference.js"></script>
 </body>
-
 </html>
