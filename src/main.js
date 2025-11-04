@@ -14,5 +14,5 @@ setTimeout(() => {
     this.nextElementSibling.classList.toggle("flex");
   });
   console.log(header());
-}, 1000);
+});
 
