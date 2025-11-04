@@ -18,7 +18,7 @@
     window.onload = () => {
         Promise.all([
             loadComponents('hero', '/sections/hero.html'),
-            loadComponents('reference', './public/sections/reference.html'),
+            loadComponents('reference', '/sections/reference.html'),
         ]).then(() => {
 
         });
@@ -27,6 +27,6 @@
 <body class="box-border font-outfit">
     <div id="hero"></div>
     <div id="reference"></div>
-    <script src="./public/reference.js"></script>
+    <script src="/reference.js"></script>
 </body>
 </html>
