@@ -17,9 +17,9 @@
     };
     window.onload = () => {
         Promise.all([
-            loadComponents('header', 'src/sections/header.html'),
-            loadComponents('data-privacy', 'src/sections/data-privacy-middle-section.html'),
-            loadComponents('footer', 'src/sections/footer.html')]).then(() => {
+            loadComponents('header', 'public/sections/header.html'),
+            loadComponents('data-privacy', 'public/sections/data-privacy-middle-section.html'),
+            loadComponents('footer', 'public/sections/footer.html')]).then(() => {
                 footerLocation()
             });
     }
