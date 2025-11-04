@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet" />
     <title>Website project template</title>
-    <script src="./src/footer.js"></script>
-    <script src="./src/about.js"></script>
+   
   </head>
   <script>
     const loadComponents = (id, url) =>  {
@@ -19,25 +18,18 @@
 
     window.onload = () => {
         Promise.all([
-            loadComponents('header', 'src/sections/header.html'),
-            loadComponents('hero', 'src/sections/hero.html'),
-            loadComponents('contact', 'src/sections/contact.html'),
-            loadComponents('about', 'src/sections/about.html'),
-            loadComponents('service', 'src/sections/service.html'),
-            loadComponents('reference', 'src/sections/reference.html'),
-            loadComponents('footer', 'src/sections/footer.html')]).then(() => {
-                footerLocation(),
-                 aboutInit(); 
+          
+            loadComponents('hero', '/sections/hero.html'),
+            loadComponents('about', '/sections/about.html')]).then(() => {
             });
     }
 </script>
 <body class="box-border font-outfit">
+   <div id="hero"></div>
    <div id="about"></div>
-    <div id="service"></div>
-    <div id="contact"></div>
-    <div id="reference"></div>
-    <div id="footer"></div>
-      <script src="src/main.js"></script>
+  
+     <script src="/about.js"></script>
+
 </body>
 
 </html>
