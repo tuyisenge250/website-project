@@ -22,9 +22,9 @@
 
     window.onload = async () => {
       await Promise.all([
-        loadComponents('header', '/sections/header.html'),
-        loadComponents('contact-middle', '/sections/contact-middle-section.html'),
-        loadComponents('footer', '/sections/footer.html')
+        loadComponents('header', 'sections/header.html'),
+        loadComponents('contact-middle', 'sections/contact-middle-section.html'),
+        loadComponents('footer', 'sections/footer.html')
       ]);
       ContactPage();
     };
