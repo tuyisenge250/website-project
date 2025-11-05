@@ -9,7 +9,7 @@ export function ContactPage() {
     const d = contactData; 
 
     renderSection('#Profile-Info', `
-        <h1 class="font-semibold text-2xl py-4">${d.profile.title}</h1>
+        <h1 class="font-semibold py-4">${d.profile.title}</h1>
         <h1 class="font-bold">${d.profile.agency}</h1>
         <p>${d.profile.name}</p>
         <p>${d.profile.street}</p>
@@ -31,8 +31,8 @@ export function ContactPage() {
     `);
 
     renderSection('#Disclaimer', `
-        <h1 class="font-bold text-2xl lg:text-3xl py-6 md:pt-0">${d.disclaimer.heading}</h1>
-        <article class="text-xl  xl:text-3xl">${d.disclaimer.text}</article>
+        <h1 class="font-bold sm:text-2xl lg:text-3xl py-6 md:pt-0">${d.disclaimer.heading}</h1>
+        <article>${d.disclaimer.text}</article>
     `);
 
     console.log("✅ Contact page content loaded successfully");
