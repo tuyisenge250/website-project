@@ -58,7 +58,7 @@ function navList() {
       { text: "About", link: "#about" },
       { text: "Services", link: "#service" },
       { text: "References", link: "reference.html" },
-      { text: "Contact", link: "contact.html" },
+      { text: "Contact", link: "contact-page.html" },
     ])
   );
 }
