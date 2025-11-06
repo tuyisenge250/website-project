@@ -57,7 +57,7 @@ function navList() {
     ...createNavList([
       { text: "About", link: "#about" },
       { text: "Services", link: "#service" },
-      { text: "References", link: "reference.html" },
+      { text: "References", link: "data-privacy.html" },
       { text: "Contact", link: "contact-page.html" },
     ])
   );
