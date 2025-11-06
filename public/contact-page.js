@@ -35,3 +35,4 @@ export function ContactPage() {
         <article>${d.disclaimer.text}</article>
     `);
 }
+
