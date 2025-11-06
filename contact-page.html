@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contact-middle"></div>
+    <div id="footer"></div>
+
+    <script type="module">
+        import { ContactPage } from "/src/contact-page.js";
+
+        const loadComponents = async (id, url) => {
+            const res = await fetch(url);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        };
+
+        window.onload = async () => {
+            await Promise.all([
+                loadComponents('header', 'public/sections/header.html'),
+                loadComponents('contact-middle', 'public/sections/contact-middle-section.html'),
+                loadComponents('footer', 'public/sections/footer.html')
+            ]);
+            ContactPage();
+        };
+    </script>
+</body>
+
+</html>
