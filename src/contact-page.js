@@ -31,9 +31,7 @@ export function ContactPage() {
     `);
 
     renderSection('#Disclaimer', `
-        <h1 class="font-bold sm:text-2xl lg:text-3xl py-6 md:pt-0">${d.disclaimer.heading}</h1>
+        <h1 class="font-bold sm:text-2xl md:text-xl lg:text-3xl py-6 md:pt-0">${d.disclaimer.heading}</h1>
         <article>${d.disclaimer.text}</article>
     `);
-
-    console.log("✅ Contact page content loaded successfully");
 }
