@@ -24,13 +24,15 @@
 
         window.onload = async () => {
             await Promise.all([
+                loadComponents('header', '/sections/header.html'),
+                loadComponents('footer', '/sections/footer.html'),
                 loadComponents('contact-middle', '/sections/contact-middle-section.html'),
             ]);
             ContactPage();
         };
     </script>
     <script src="/header.js"></script>
-    <script src="footer.js"></script>
+    <script src="/footer.js"></script>
 </body>
 
 </html>
