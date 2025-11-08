@@ -28,9 +28,9 @@ function footerLocation() {
     footerSocialElement.innerHTML = textSocial.map(line => `<p>${line}</p>`).join('');
   }
 
-  const textLegal = ["Datenschutz", "Impressum"];
+  const textLegal = [{text: "Datenschutz", link: "data-privacy.html"}, {text: "Impressum", link: "contact-page.html"}];
   footerSocialElement.innerHTML += `
     <div class="flex flex-wrap justify-between w-[50%] md:w-[40%] lg:flex-col gap-0 lg:w-[15%] lg:justify-start" id="footer-legal">
-      ${textLegal.map(line => `<p>${line}</p>`).join('')}
+      ${textLegal.map(line => `<a href="${line.link}">${line.text}</a>`).join('')}
     </div>`;
 }
