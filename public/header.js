@@ -41,11 +41,24 @@ function createLanguageList(array) {
 
 function menu() {
   header().hamburgerMenu.addEventListener("click", function () {
+
+    if(location.pathname.includes("contact-page.html"))
+      this.parentElement.classList.toggle("mb-64")
+    
+    else if(location.pathname.includes("data-privacy.html")){
+console.log(this.parentElement)
+this.parentElement.classList.toggle("mb-60")
+    }
+
     this.children[1].classList.toggle("hidden");
     this.children[2].classList.toggle("hidden");
 
     this.nextElementSibling.classList.toggle("hidden");
     this.nextElementSibling.classList.toggle("flex");
+
+
+
+
   });
 }
 
