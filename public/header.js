@@ -85,6 +85,9 @@ function checkPage() {
       "fill-green"
     );
   }
+  else{
+    document.getElementById("logo").children[0].firstElementChild.classList.add("md:hidden")
+  }
 }
 
 setTimeout(() => {
