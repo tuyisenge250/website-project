@@ -77,4 +77,4 @@ function checkPage() {
 
 setTimeout(() => {
   menu(), navList(), checkPage(), linksNavigation()
-}, 100);
+}, 1000);
