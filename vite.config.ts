@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact-page.html'),
+        data_privacy: resolve(__dirname, "data-privacy.html")
       },
   },
 },
