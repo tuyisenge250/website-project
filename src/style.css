@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
+@theme{
+    --font-outfit: 'Outfit', sans-serif;
+    --color-green: rgb(0, 103, 46);
+    --color-bgray: #EFECEA;
+}
+
+@utility grid-cols-3-max {
+  grid-template-columns: repeat(3, max-content);
+}

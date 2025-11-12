@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
     <title>Website project template</title>
-</head>
-<script>
+    
+  </head>
+  <script>
     const loadComponents = (id, url) =>  {
         fetch(url)
         .then((response) => response.text())
@@ -16,16 +17,27 @@
     }
 
     window.onload = () => {
-        loadComponents('header', '/sections/header.html');
-        loadComponents('hero', '/sections/hero.html');
-        loadComponents('contact', '/sections/contact.html');
+        loadComponents('header', '/sections/header.html'),
+        loadComponents('hero', '/sections/hero.html'),
+        loadComponents('about', '/sections/about.html'),
+        loadComponents('service', '/sections/service.html')
+        loadComponents('reference', '/sections/reference.html'),
         loadComponents('footer', '/sections/footer.html');
     }
 </script>
-<body>
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>
+<body class="box-border font-outfit bg-bgray">
+   <div id="header" class="sticky top-0"></div>
+   <div id="hero"></div>
+   <div id="about"></div>
+   <div id="service"></div>
+   <div id="reference"></div>
+   <div id="footer"></div>
+
+     <script src="/reference.js"></script>
+     <script src="/about.js"></script>
+     <script src="/service.js"></script>
+     <script src="/header.js"></script>
+     <script src="footer.js"></script>
+     <script src="/src/main.js"></script>
 </body>
 </html>
